@@ -3,7 +3,7 @@ services:
     name: genome-quotation-pdf
     runtime: python
     pythonVersion: "3.11"
-    buildCommand: pip install -r requirements_invoice.txt
+    buildCommand: pip install -r requirements.txt
     startCommand: gunicorn genome_quotation_pdf_service:app
     envVars:
       - key: PYTHON_VERSION
