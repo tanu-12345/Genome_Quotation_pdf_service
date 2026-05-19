@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: genome-quotation-pdf
-    runtime: python
-    pythonVersion: "3.11"
-    buildCommand: pip install -r requirements.txt
-    startCommand: python3 -m gunicorn genome_quotation_pdf_service:app --bind 0.0.0.0:$PORT
