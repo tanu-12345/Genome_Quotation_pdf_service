@@ -3,7 +3,7 @@ Genome Corporation Quotation PDF Generator Microservice
 Generates branded quotation PDFs matching company template
 Deploy to: Render.com (free tier)
 """
-
+import os
 from flask import Flask, request, jsonify, send_file
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -16,7 +16,7 @@ import json
 from datetime import datetime
 import base64
 import logging
-import os
+
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max
 
