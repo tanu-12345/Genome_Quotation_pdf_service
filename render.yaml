@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: genome-quotation-pdf
+    runtime: python
+    pythonVersion: 3.11
+    startCommand: gunicorn genome_quotation_pdf_service:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
